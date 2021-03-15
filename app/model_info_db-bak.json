@@ -1,0 +1,72 @@
+{
+    "productA": {
+        "image_size": [
+            2048,
+            2048
+        ],
+        "batch_size": 2,
+        "product_name": "product1",
+        "site_name": "site1",
+        "create_by":"admin",
+        "input_folder_path": "/data/data/data-test/3000",
+        "result_path": "/output/data/predict_folder",
+        "models": [
+            {
+                "model_name": "model1",
+                "model_file": "/output/data/20201210/D1_D8.pth",
+                "labels": [
+                    "D1",
+                    "D2",
+                    "D3",
+                    "D4",
+                    "D5",
+                    "D6",
+                    "D7",
+                    "D8"
+                ],
+                "focus_labels": {
+                    "D1": 0.3,
+                    "D2": 0.5,
+                    "D3": 0.3,
+                    "D4": 0.3,
+                    "D5": 0.3,
+                    "D6": 0.3,
+                    "D7": 0.6,
+                    "D8": 0.6
+                },
+                "threshold": 0.01,
+                "config_file": "./algorithm/configs/COCO-InstanceSegmentation/mask_rcnn_X_101_32x8d_FPN_3x.yaml",
+                "algo_name": "MaskNet-X101"
+            }
+        ]
+    },
+    "productB": {
+        "image_size": [
+            128,
+            128
+        ],
+        "batch_size": 4,
+        "product_name": "product2",
+        "site_name": "site2",
+        "create_by":"admin",
+        "input_folder_path": "/data/data-1223/val/images",
+        "result_path": "/output/data_code_yuan/predict_folder",
+        "models": [
+            {
+                "model_name": "model2",
+                "model_file": "/output/data_code_yuan_20201223/model_final.pth",
+                "labels": [
+                    "NG",
+                    "OK"
+                ],
+                "focus_labels": {
+                    "NG": 0.5,
+                    "OK": 0.3
+                },
+                "threshold": 0.01,
+                "config_file": "./algorithm/configs/COCO-InstanceSegmentation/mask_rcnn_X_101_32x8d_FPN_3x.yaml",
+                "algo_name": "MaskNet-X101"
+            }
+        ]
+    }
+}

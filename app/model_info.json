@@ -1,0 +1,37 @@
+{
+    "batch_size": 1,
+    "product_id": 1,
+    "site_id": 2,
+    "image_size": [
+        2048,
+        2048
+    ],
+    "models": [
+        {
+            "model_file": "/output/data/20201210/D1_D8.pth",
+            "labels": [
+                "D1",
+                "D2",
+                "D3",
+                "D4",
+                "D5",
+                "D6",
+                "D7",
+                "D8"
+            ],
+            "focus_labels": {
+                "D1": 0.1,
+                "D2": 0.2,
+                "D3": 0.1,
+                "D4": 0.1,
+                "D5": 0.1,
+                "D6": 0.1,
+                "D7": 0.1,
+                "D8": 0.1
+            },
+            "threshold": 0.01,
+            "config_file": "./algorithm/configs/COCO-InstanceSegmentation/mask_rcnn_X_101_32x8d_FPN_3x.yaml",
+            "algo_name": "MaskNet-X101"
+        }
+    ]
+}
