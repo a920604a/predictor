@@ -12,10 +12,8 @@ RUN set -x \
 	&& apt-get update \
 	&& apt-get install --no-install-recommends --no-install-suggests -y vim libsm6 libxrender1 libxext6 libgl1-mesa-glx libglib2.0-dev mysql-server \
     && pip install numpy XlsxWriter sklearn opencv-python SQLAlchemy mysqlclient autopep8 PyYAML loguru pymysql\
-                   scalene \
-    -i https://mirrors.aliyun.com/pypi/simple
-    
-COPY ./Shanghai /etc/localtime
+                   scalene 
+
 RUN mkdir /logs && chmod 777 -R /logs/
 COPY ./app/ /app/
 WORKDIR /app
